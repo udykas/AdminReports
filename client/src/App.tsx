@@ -2,6 +2,7 @@ import { useState } from 'react';
 import QueryBuilder, { formatQuery, RuleGroupType } from 'react-querybuilder';
 
 import './App.scss';
+import fields from './Fields'
 
 function App() {
   const [query, setQuery] = useState<RuleGroupType>({
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <QueryBuilder
-        fields={[{ name: "test", label: "Test" }]}
+        fields={fields}
         query={query}
         onQueryChange={(q) => setQuery(q)}
       />
